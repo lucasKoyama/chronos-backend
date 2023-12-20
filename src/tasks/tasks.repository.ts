@@ -1,4 +1,8 @@
-import { DynamoDBClient, ScanCommand } from '@aws-sdk/client-dynamodb';
+import {
+  DynamoDBClient,
+  GetItemCommand,
+  ScanCommand,
+} from '@aws-sdk/client-dynamodb';
 import { Injectable } from '@nestjs/common';
 import { Task } from './entities/task.entity';
 
@@ -29,5 +33,22 @@ export class TasksRepository {
     }
 
     return result;
+  }
+
+  async findById(taskId: string) {
+    const command = new GetItemCommand({
+      TableName: this.tableName,
+      Key: {
+        taskId: { S: taskId },
+      },
+    });
+
+    const result = await this.client.send(command);
+
+    if (result.Item) {
+      return Task.newInstanceFromDynamoDBObject(result.Item);
+    }
+
+    return undefined;
   }
 }
