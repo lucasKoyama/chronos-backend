@@ -3,7 +3,7 @@ export class Task {
   title: string;
   description: string;
   // tag?: string;
-  status: boolean;
+  finished: boolean;
   importance: number;
   urgency: number;
 }
