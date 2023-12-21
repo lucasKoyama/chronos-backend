@@ -1,6 +1,8 @@
 import {
+  AttributeValue,
   DynamoDBClient,
   GetItemCommand,
+  PutItemCommand,
   ScanCommand,
 } from '@aws-sdk/client-dynamodb';
 import { Injectable } from '@nestjs/common';
@@ -50,5 +52,37 @@ export class TasksRepository {
     }
 
     return undefined;
+  }
+
+  async upsertOne(data: Task) {
+    const itemObject: Record<string, AttributeValue> = {
+      taskId: {
+        S: data.taskId,
+      },
+      title: {
+        S: data.title,
+      },
+      description: {
+        S: data.description,
+      },
+      finished: {
+        BOOL: data.finished,
+      },
+      importance: {
+        N: String(data.importance),
+      },
+      urgency: {
+        N: String(data.urgency),
+      },
+    };
+
+    const command = new PutItemCommand({
+      TableName: this.tableName,
+      Item: itemObject,
+    });
+
+    await this.client.send(command);
+
+    return data;
   }
 }
