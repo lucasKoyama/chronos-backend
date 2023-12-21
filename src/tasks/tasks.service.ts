@@ -20,11 +20,20 @@ export class TasksService {
     return this.repository.findById(id);
   }
 
-  update(id: number, updateTaskDto: UpdateTaskDto) {
-    return `This action updates a #${id} task`;
+  async update(id: string, updateTaskDto: UpdateTaskDto) {
+    const existingObject = await this.repository.findById(id);
+    if (existingObject) {
+      const updateFields = Object.keys(updateTaskDto);
+      updateFields.forEach(
+        (field) => (existingObject[field] = updateTaskDto[field]),
+      );
+      return this.repository.upsertOne(existingObject);
+    } else {
+      return false;
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} task`;
+  remove(id: string) {
+    return this.repository.deleteById(id);
   }
 }

@@ -1,5 +1,6 @@
 import {
   AttributeValue,
+  DeleteItemCommand,
   DynamoDBClient,
   GetItemCommand,
   PutItemCommand,
@@ -84,5 +85,22 @@ export class TasksRepository {
     await this.client.send(command);
 
     return data;
+  }
+
+  async deleteById(taskId: string) {
+    const command = new DeleteItemCommand({
+      TableName: this.tableName,
+      Key: {
+        taskId: {
+          S: taskId,
+        },
+      },
+      ReturnConsumedCapacity: 'TOTAL',
+      ReturnValues: 'ALL_OLD',
+    });
+
+    const result = await this.client.send(command);
+    if (result.Attributes) return true;
+    return false;
   }
 }
