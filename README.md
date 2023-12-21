@@ -28,7 +28,7 @@ Backend created with [Nest](https://github.com/nestjs/nest) framework and Dynamo
 ## TO-DO
 - [x] Basic CRUD in NestJS
 - [x] Integration with DynamoDB 
-- [ ] Handling with bad cenarios like updating a non-existent task, or other cases
+- [ ] Handling with bad scenarios like updating a non-existent task, or other cases
 - [ ] User route
 - [ ] JWT Auth
 
