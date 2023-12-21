@@ -23,8 +23,14 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
+Backend created with [Nest](https://github.com/nestjs/nest) framework and DynamoDB for database.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## TO-DO
+- [x] Basic CRUD in NestJS
+- [x] Integration with DynamoDB 
+- [ ] Handling with bad cenarios like updating a non-existent task, or other cases
+- [ ] User route
+- [ ] JWT Auth
 
 ## Installation
 
