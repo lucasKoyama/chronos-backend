@@ -1,3 +1,4 @@
+![chronos](https://github.com/lucasKoyama/chronos-backend/assets/121680414/e691c055-47a2-4118-b28d-1fe742da7607)
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
