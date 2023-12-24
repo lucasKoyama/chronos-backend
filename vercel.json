@@ -3,8 +3,7 @@
   "functions": {
     "api": {
       "runtime": "@vercel/node",
-      "includeFiles": "src/**",
-      "entry": "src/main.ts"
+      "includeFiles": "src/**"
     }
   },
   "routes": [
