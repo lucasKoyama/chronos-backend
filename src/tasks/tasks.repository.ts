@@ -56,9 +56,13 @@ export class TasksRepository {
   }
 
   async upsertOne(data: Task) {
+    console.log(data);
     const itemObject: Record<string, AttributeValue> = {
       taskId: {
         S: data.taskId,
+      },
+      userId: {
+        S: data.userId,
       },
       title: {
         S: data.title,
@@ -66,8 +70,11 @@ export class TasksRepository {
       description: {
         S: data.description,
       },
-      finished: {
-        BOOL: data.finished,
+      scheduled: {
+        N: String(data.scheduled.getTime()),
+      },
+      tag: {
+        S: data.tag,
       },
       importance: {
         N: String(data.importance),
@@ -75,7 +82,17 @@ export class TasksRepository {
       urgency: {
         N: String(data.urgency),
       },
+      finished: {
+        BOOL: data.finished,
+      },
+      createdAt: {
+        N: String(data.createdAt.getTime()),
+      },
     };
+
+    if (data.updatedAt) {
+      itemObject.updatedAt = { N: String(new Date(data.updatedAt).getTime()) };
+    }
 
     const command = new PutItemCommand({
       TableName: this.tableName,
