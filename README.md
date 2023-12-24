@@ -26,6 +26,9 @@
 ## Description
 Backend created with [Nest](https://github.com/nestjs/nest) framework and DynamoDB for database.
 
+## Database Schema
+![dbschema](https://github.com/lucasKoyama/chronos-backend/assets/database_schema.png)
+
 ## TO-DO
 - [x] Basic CRUD in NestJS
 - [x] Integration with DynamoDB 

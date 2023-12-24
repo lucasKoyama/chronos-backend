@@ -5,17 +5,26 @@ export class CreateTaskDto {
   taskId: string;
 
   @IsString()
+  userId: string;
+
+  @IsString()
   title: string;
 
   @IsString()
   description: string;
 
-  @IsBoolean()
-  finished: boolean;
+  @IsNumber()
+  scheduled: Date;
+
+  @IsString()
+  tag: string;
 
   @IsNumber()
   importance: number;
 
   @IsNumber()
   urgency: number;
+
+  @IsBoolean()
+  finished: boolean;
 }
