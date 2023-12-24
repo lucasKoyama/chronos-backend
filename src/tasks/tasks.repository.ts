@@ -38,6 +38,26 @@ export class TasksRepository {
     return result;
   }
 
+  async findAllByUserId(userId) {
+    const result: Task[] = [];
+
+    const command = new ScanCommand({
+      TableName: this.tableName,
+      FilterExpression: 'userId = :userId',
+      ExpressionAttributeValues: { ':userId': { S: userId } },
+    });
+
+    const response = await this.client.send(command);
+
+    if (response.Items) {
+      response.Items.forEach((item) => {
+        result.push(Task.newInstanceFromDynamoDBObject(item));
+      });
+    }
+
+    return result;
+  }
+
   async findById(taskId: string) {
     const command = new GetItemCommand({
       TableName: this.tableName,

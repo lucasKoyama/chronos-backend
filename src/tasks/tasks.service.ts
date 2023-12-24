@@ -16,6 +16,10 @@ export class TasksService {
     return this.repository.findAll();
   }
 
+  findAllByUserId(userId: string) {
+    return this.repository.findAllByUserId(userId);
+  }
+
   findOne(id: string) {
     return this.repository.findById(id);
   }
