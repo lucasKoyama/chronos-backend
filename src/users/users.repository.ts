@@ -55,6 +55,17 @@ export class UsersRepository {
     return undefined;
   }
 
+  async findByEmail(userEmail: string) {
+    // tech debt, couldn't find a cheaper solution, having a second index would have additional costs
+    const user = await this.findAll().then((users) =>
+      users.find((user) => user.email == userEmail),
+    );
+
+    if (user) return user;
+
+    return undefined;
+  }
+
   async upsertOne(data: User) {
     const itemObject: Record<string, AttributeValue> = {
       id: {
