@@ -56,7 +56,6 @@ export class UsersRepository {
   }
 
   async upsertOne(data: User) {
-    console.log(data);
     const itemObject: Record<string, AttributeValue> = {
       id: {
         S: data.id,
