@@ -8,7 +8,7 @@ export class User {
   passwordHash: string;
   firstName: string;
   lastName: string;
-  tags: Set<string>;
+  tags: string[];
 
   static newInstanceFromDTO(data: CreateUserDto) {
     const result = new User();
@@ -18,7 +18,7 @@ export class User {
     result.passwordHash = data.passwordHash;
     result.firstName = data.firstName;
     result.lastName = data.lastName;
-    result.tags = data.tags;
+    result.tags = [...data.tags];
 
     return result;
   }
@@ -31,7 +31,7 @@ export class User {
     result.passwordHash = data.passwordHash.S;
     result.firstName = data.firstName.S;
     result.lastName = data.lastName.S;
-    result.tags = new Set(data.tags.S);
+    result.tags = [...data.tags.SS];
 
     return result;
   }

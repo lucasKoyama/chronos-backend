@@ -20,5 +20,5 @@ export class CreateUserDto {
   lastName: string;
 
   @MaxLength(40, { each: true })
-  tags: Set<string>;
+  tags: string[];
 }
