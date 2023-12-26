@@ -13,7 +13,6 @@ export class CreateTaskDto {
   @IsString()
   description: string;
 
-  @IsNumber()
   scheduled: Date;
 
   @IsString()
