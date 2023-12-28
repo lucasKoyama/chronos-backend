@@ -11,7 +11,7 @@ async function bootstrap() {
 
   const corsOptions: CorsOptions = {
     origin: [
-      'https://chronos-frontend.vercel.app',
+      'https://chronos-manager.vercel.app',
       'http://192.168.200.105:3000',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
