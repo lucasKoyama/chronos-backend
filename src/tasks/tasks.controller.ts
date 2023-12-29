@@ -34,7 +34,7 @@ export class TasksController {
     return this.tasksService.findAll();
   }
 
-  @Get('/:userId')
+  @Get('user/:userId')
   @ApiOperation({
     summary: 'Get all tasks by user ID',
     description: 'Retrieve a list of all tasks of a specified user ID',

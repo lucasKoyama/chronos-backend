@@ -32,9 +32,9 @@ Backend created with [Nest](https://github.com/nestjs/nest) framework and Dynamo
 ## TO-DO
 - [x] Basic CRUD in NestJS
 - [x] Integration with DynamoDB 
+- [x] User route
+- [x] JWT Auth
 - [ ] Handling with bad scenarios
-- [ ] User route
-- [ ] JWT Auth
 
 ## Installation
 

@@ -12,18 +12,15 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 import { ApiTags } from '@nestjs/swagger';
+import { SkipAuth } from 'src/auth/auth.guard';
 
 @Controller('users')
 @ApiTags('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Post('/login')
-  login(@Body() loginData: { email: string; passwordHash: string }) {
-    return this.usersService.login(loginData);
-  }
-
   @Post()
+  @SkipAuth()
   create(@Body() createUserDto: CreateUserDto) {
     return this.usersService.create(createUserDto);
   }

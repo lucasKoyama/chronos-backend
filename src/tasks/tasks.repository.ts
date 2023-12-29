@@ -95,7 +95,7 @@ export class TasksRepository {
         S: data.description,
       },
       scheduled: {
-        N: String(data.scheduled.getTime()),
+        N: String(new Date(data.scheduled).getTime()),
       },
       tag: {
         S: data.tag,
@@ -110,7 +110,7 @@ export class TasksRepository {
         BOOL: data.finished,
       },
       createdAt: {
-        N: String(data.createdAt.getTime()),
+        N: String(new Date(data.createdAt).getTime()),
       },
     };
 
