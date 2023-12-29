@@ -8,6 +8,7 @@ import {
 } from '@aws-sdk/client-dynamodb';
 import { Injectable } from '@nestjs/common';
 import { User } from './entities/user.entity';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersRepository {
@@ -67,6 +68,7 @@ export class UsersRepository {
   }
 
   async upsertOne(data: User) {
+    const passwordHashSalts = 2;
     const itemObject: Record<string, AttributeValue> = {
       id: {
         S: data.id,
@@ -78,7 +80,7 @@ export class UsersRepository {
         S: data.email,
       },
       passwordHash: {
-        S: data.passwordHash,
+        S: await bcrypt.hash(data.passwordHash, passwordHashSalts),
       },
       firstName: {
         S: data.firstName,

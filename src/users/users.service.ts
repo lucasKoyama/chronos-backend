@@ -8,10 +8,9 @@ import { User } from './entities/user.entity';
 export class UsersService {
   constructor(private readonly repository: UsersRepository) {}
 
-  async login(loginData: { email: string; passwordHash: string }) {
-    const user = await this.repository.findByEmail(loginData.email);
-    if (loginData.passwordHash === user.passwordHash) return user;
-    return undefined;
+  async findByEmail(email: string) {
+    const user = await this.repository.findByEmail(email);
+    return user;
   }
 
   create(createUserDto: CreateUserDto) {
