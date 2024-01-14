@@ -11,11 +11,11 @@ Think of the STAR + Hero Journey description for the entire README:
 <details>
   <summary>Summary</summary>
 
-  1. [Overview]()
-  2. [Features & Challenges solved]()
-  3. [Tools used]()
-  4. [Results]()
-  5. [Authors]()
+  1. [Overview](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#overview---chronos-app-backend)
+  2. [Features & Challenges solved](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#-features--challenges-solved)
+  3. [Tools used](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#%EF%B8%8F-tools-used)
+  4. [Running Locally](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#running-the-app)
+  5. [Authors](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#authors)
 </details>
 <p>
   A brief description of the project.
@@ -46,13 +46,13 @@ Still creating the Swagger!!
 ## Database Schema
 ![dbschema](https://github.com/lucasKoyama/chronos-backend/blob/main/database_schema.png)
 
+## Running the app
 
-## Installation
+### Installation
 ```bash
 $ npm install
 ```
 
-## Running the app
 ```bash
 # development
 $ npm run start
