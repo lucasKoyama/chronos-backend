@@ -16,6 +16,7 @@ Think of the STAR + Hero Journey description for the entire README:
   3. [Tools used](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#%EF%B8%8F-tools-used)
   4. [Running Locally](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#running-the-app)
   5. [Authors](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#authors)
+  6. [License](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#license)
 </details>
 <p>
   A brief description of the project.
@@ -46,7 +47,7 @@ Still creating the Swagger!!
 ## Database Schema
 ![dbschema](https://github.com/lucasKoyama/chronos-backend/blob/main/database_schema.png)
 
-## Running the app
+## Running Locally
 
 ### Installation
 ```bash
