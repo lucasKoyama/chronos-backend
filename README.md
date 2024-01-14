@@ -1,49 +1,57 @@
+# Overview - Chronos App Backend
 ![chronos](https://github.com/lucasKoyama/chronos-backend/assets/121680414/e691c055-47a2-4118-b28d-1fe742da7607)
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+<!--
+Think of the STAR + Hero Journey description for the entire README:
+1. Situation: begin with the situation, what it aims to solve, and what the common problem is.
+2. Tasks: What were my responsibilities? What challenges were I responsible for?
+3. Action: What did I do to solve the challenge?
+4. Results: solutions developed, value brought to the company, and users.
+-->
+<!-- SITUATION / COMMON PROBLEM -->
+<details>
+  <summary>Summary</summary>
+
+  1. [Overview]()
+  2. [Features & Challenges solved]()
+  3. [Tools used]()
+  4. [Results]()
+  5. [Authors]()
+</details>
+<p>
+  A brief description of the project.
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<a href="https://chronos-backend.vercel.app/">
+🌐DEMO LIVE - Click here to check it out on the web!
+</a>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📌 Features & Challenges solved
+<!-- TASKS / CHALLENGES -->
 
-## Description
-Backend created with [Nest](https://github.com/nestjs/nest) framework and DynamoDB for database.
+## 🛠️ Tools used
+<!-- ACTION -->
+<!-- SKILL_BADGE/NAME: DESCRIPTION WHY IT WAS USED -->
+
+![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
 
 ## Database Schema
 ![dbschema](https://github.com/lucasKoyama/chronos-backend/blob/main/database_schema.png)
 
-## TO-DO
-- [x] Basic CRUD in NestJS
-- [x] Integration with DynamoDB 
-- [x] User route
-- [x] JWT Auth
-- [ ] Handling with bad scenarios
 
 ## Installation
-
 ```bash
 $ npm install
 ```
 
 ## Running the app
-
 ```bash
 # development
 $ npm run start
@@ -55,27 +63,8 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Lucas Koyama](https://lucaskoyama.dev/)
+## Authors
+- [lucasKoyama](https://lucaskoyama.dev/)
 
 ## License
-
 Nest is [MIT licensed](LICENSE).
