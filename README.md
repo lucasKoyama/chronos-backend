@@ -15,8 +15,9 @@ Think of the STAR + Hero Journey description for the entire README:
   2. [Features & Challenges solved](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#-features--challenges-solved)
   3. [Tools used](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#%EF%B8%8F-tools-used)
   4. [Running Locally](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#running-the-app)
-  5. [Authors](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#authors)
-  6. [License](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#license)
+  5. [Wanna learn about Nest.js + AWS DynamoDB?]()
+  6. [Authors](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#authors)
+  7. [License](https://github.com/lucasKoyama/chronos-backend/blob/main/README.md#license)
 </details>
 <p>
   A brief description of the project.
@@ -64,6 +65,9 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Wanna learn about Nest.js + AWS DynamoDB?
+Checkout the [Gist](https://gist.github.com/lucasKoyama/97c50dc2bfc98fd64922a3e37ccd811f) that I did during this backend development!
 
 ## Authors
 - [lucasKoyama](https://lucaskoyama.dev/)
